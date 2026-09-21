@@ -190,7 +190,7 @@ function Lede({ text, highlight }) {
 
 function Rail() {
   const active = useActiveSection();
-  const [theme, cycleTheme] = useTheme();
+  const [, cycleTheme] = useTheme();
 
   return (
     <header className="rail">
@@ -214,7 +214,9 @@ function Rail() {
         <a href={ME.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
 
-    
+      <button className="theme-btn" type="button" onClick={cycleTheme}>
+        Toggle theme
+      </button>
     </header>
   );
 }
